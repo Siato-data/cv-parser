@@ -107,7 +107,7 @@ def parse(client: OpenAI, resume_text: str, job_description: Optional[str] = Non
                     {"role": "user", "content": prompt},
                 ],
                 temperature=0,
-                max_tokens=2048,
+                max_completion_tokens=2048,,
                 response_format={"type": "json_object"},
             )
             result = json.loads(response.choices[0].message.content.strip())
